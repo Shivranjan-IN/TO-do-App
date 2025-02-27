@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-Do App</title>
+</head> 
+<body>
+      <h1>Todo list</h1>
+    <h4> 1.  Take class</h4>
+    <div id="todo-1">
+    <h4> 2. Go  out to eat</h4>
+    <button onclick="deleteTodo(1)">Delete Todo</button>
+</div>
+<div id="todo-2">
+    <h4> 3. Todo 3</h4>
+    <button onclick="deleteTodo(2)">Delete Todo</button>
+</div>
+    <div>
+        <input type="text">
+        <button onclick="AddTodo()">Add Todo</button>
+        <!-- <button onclick="deleteTodo()">Delete Todo</button> -->
+    <div>
+       <script src="script.js"></script>
+       <script>
+       
+       function AddTodo(){
+     const inputelement=   document.querySelector("input");
+const value= inputelement.value;
+console.log(value);
+       }
+       function deleteTodo(index){
+     const element=   document.getElementById("todo-"+ index);
+     
+      element.parentNode.removeChild(element);
+       }
+             
+       </script>
+    </div>
+</body>
+</html>  
